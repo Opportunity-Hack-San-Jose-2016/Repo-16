@@ -9,6 +9,9 @@ housingtrustApp.config(['$routeProvider', '$locationProvider',
             }).when('/register', {
                 templateUrl: 'register-types.html',
                 controller: 'registerController'
+            }).when('/explore', {
+                templateUrl: 'explore.html',
+                controller: 'explore_Controller'
             }).when('/eligibility', {
                 templateUrl: 'eligibility.html',
                 controller: 'eligibility_Controller'
@@ -75,14 +78,23 @@ housingtrustApp.controller('eligibility_Controller', function($scope, $http, $ro
 	        }
 		}).success(function(data) {
 			if (data.statusCode == 200) {
-				$scope.results = '<b class="green">Congratulations!</b><br>You are eligible!!<br>We will contact you soon';
+				if(data.isEligible == "1") {
+					$scope.results = 'Congratulations! You are eligible!! We will contact you soon';
+				}
+				else if(data.isEligible == "0"){
+					$scope.results = 'We are sorry! You are not eligible!!';
+				}
 			} else {
-				$scope.results = '<b class="orange">We are sorry!</b><br>You are not eligible!!';
+				$scope.results = 'We are sorry! You are not eligible!!';
 			}
 		}).error(function(error) {
 		});
 	};
-	
+	$(document).ready(function() {
+		// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+		$('.modal-trigger').leanModal();
+	});
+
 	$scope.closeMyModal = function() {
 		window.location = "/eligibility";
 	};
@@ -94,4 +106,11 @@ housingtrustApp.controller('admin_tracking_Controller', function($scope, $http, 
 
 housingtrustApp.controller('thankyou_Controller', function($scope, $http, $routeParams) {
 	
+});
+
+housingtrustApp.controller('explore_Controller', function($scope, $http, $routeParams) {
+	var httpResponse = $http.get("https://api.mlab.com/api/1/databases/heroku_f2wnrr7c/collections/builders?apiKey=Gop-RmmiDZYteuAJCttyTwuerv6uJcZ6");
+	httpResponse.success(function(data) {
+		$scope.houses = data;
+	});
 });

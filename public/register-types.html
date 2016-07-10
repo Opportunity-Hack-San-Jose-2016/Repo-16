@@ -1,4 +1,17 @@
 <div id="wrapper" class="row ng-scope">
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#tet').click(function(){return false; });
+$("#question1, #question2, #question3, #question4").click(function() {
+  if($("#question1").is(':checked') && $("#question2").is(':checked') && $("#question3").is(':checked') && $("#question4").is(':checked') ) {
+    $('#tet').unbind('click');
+   
+  }else{
+    $('#tet').bind('click', function(){ return false; });
+  }
+});
+});
+</script>
 	<header>
 		<div class="navbar-fixed">
 			<nav>
@@ -14,96 +27,74 @@
 		<div class="col s4">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light center">
-					<img class="activator" src="images/step1.png">
+					<img class="activator" src="images/orientation.png">
 				</div>
 				<div class="card-content center">
 					<p>
-					<h5>
-						<b>Review Program Requirements and Register for the General
-							Interest List</b>
-						<h6>
+					<h5><b>Appointment for Orientation</b></h5>
 							</p>
 							<span class="card-title activator blue-text text-darken-4">Click
 								here to know more</span>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4 center">STEP
-						1<i class="material-icons right">close</i>
+					<span class="card-title grey-text text-darken-4 center">Appointment for Orientation<i class="material-icons right">close</i>
 					</span>
+					<p>Applicants must attend the Orientation and Application workshop for the City of Santa Clara BMP Program. The workshop will:</p>
 					<ol>
-						<li>Review BMP Program Eligibility Requirements and
-							Purchase Process</li>
-						<li>Review Occupancy Standards</li>
-						<li>Join the general interest list. You will receive new
-							program updates, upcoming BMP orientation & application
-							workshop dates, and available BMP homes information.</li>
-						<li>Contact Housing Trust Silicon Valley for additional
-							information or inquiries.</li>
+						<li>Provide a description of the BMP program</li>
+						<li>Discuss the eligibility requirements</li>
+						<li>Review the Eligibility Application and the steps to apply for the program</li>
 					</ol>
+					<div class="center"><a class="waves-effect waves-light btn" target="_blank" href="https://htapp.youcanbook.me/" data-ycbm-modal="true"><i class="material-icons right">mode_edit</i>Register Now</a></div>
 				</div>
 			</div>
 		</div>
 		<div class="col s4">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light center">
-					<img class="activator" src="images/step1.png">
+					<img class="activator" src="images/education.png">
 				</div>
 				<div class="card-content center">
 					<p>
-					<h5>
-						<b>Review Program Requirements and Register for the General
-							Interest List</b>
-						<h6>
+					<h5><b>Appointment for Home Buyer Education Class</b></h5>
 							</p>
 							<span class="card-title activator blue-text text-darken-4">Click
 								here to know more</span>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4 center">STEP
-						1<i class="material-icons right">close</i>
+					<span class="card-title grey-text text-darken-4 center">Appointment for Home Buyer Education Class<i class="material-icons right">close</i>
 					</span>
-					<ol>
-						<li>Review BMP Program Eligibility Requirements and
-							Purchase Process</li>
-						<li>Review Occupancy Standards</li>
-						<li>Join the general interest list. You will receive new
-							program updates, upcoming BMP orientation & application
-							workshop dates, and available BMP homes information.</li>
-						<li>Contact Housing Trust Silicon Valley for additional
-							information or inquiries.</li>
-					</ol>
+					<p>Applicants are required to attend a HUD-approved 8 Hour Homebuyer Education Class. This class helps homebuyers understand the steps to homeownership.	</p>
+					<div class="center"><a class="waves-effect waves-light btn" target="_blank" href="https://sentinelappointment.youcanbook.me/" data-ycbm-modal="true"><i class="material-icons right">mode_edit</i>Register Now</a></div>
 				</div>
 			</div>
 		</div>
 		<div class="col s4">
 			<div class="card">
 				<div class="card-image waves-effect waves-block waves-light center">
-					<img class="activator" src="images/step1.png">
+					<img class="activator" src="images/eligibility.png">
 				</div>
 				<div class="card-content center">
 					<p>
-					<h5>
-						<b>Review Program Requirements and Register for the General
-							Interest List</b>
-						<h6>
+					<h5><b>Appointment for Eligibility Application</b></h5>
 							</p>
 							<span class="card-title activator blue-text text-darken-4">Click
 								here to know more</span>
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4 center">STEP
-						1<i class="material-icons right">close</i>
+					<span class="card-title grey-text text-darken-4 center">Appointment for Eligibility Application<i class="material-icons right">close</i>
 					</span>
-					<ol>
-						<li>Review BMP Program Eligibility Requirements and
-							Purchase Process</li>
-						<li>Review Occupancy Standards</li>
-						<li>Join the general interest list. You will receive new
-							program updates, upcoming BMP orientation & application
-							workshop dates, and available BMP homes information.</li>
-						<li>Contact Housing Trust Silicon Valley for additional
-							information or inquiries.</li>
-					</ol>
+					<p>Once you have been notified by Housing Trust Silicon Valley of program pre-eligibility for the BMP Program, you must obtain a pre-approval (only if a prequalification was submitted) from the BMP approved lender within 7 calendar days. Your pre-approval letter from the BMP Lender and credit report will be required to finalize program eligibility</p>
+					<input type="checkbox" id="question1" name="question1"/>
+					<label for="question1">Pre-Approval letter Received</label><br>
+					<input type="checkbox" id="question2" name="question2"/>
+					<label for="question2">Orientation done</label><br>
+					<input type="checkbox" id="question3" name="question3"/>
+					<label for="question3">PreQualification done</label><br>
+					<input type="checkbox" id="question4" name="question4"/>
+					<label for="question4">Workshop done</label><br>
+					<div class="center"><a class="waves-effect waves-light btn" href="https://applicationappointment.youcanbook.me/" target="_blank" id="tet"  data-ycbm-modal="true"><i class="material-icons right">mode_edit</i>Register Now</a></div>
+					<p><b>Note: </b> All the above steps <i>must</i> be completed in order to register an appointment</p>
 				</div>
 			</div>
 		</div>

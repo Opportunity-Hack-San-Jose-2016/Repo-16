@@ -78,7 +78,8 @@ exports.add = function(req, res) {
         if (!error && response.statusCode === 200) {
             console.log(body)
             update_response = {
-                "statusCode": 200
+                "statusCode": 200,
+                "isEligible" : eligible
             };
             res.send(update_response)
         } else {

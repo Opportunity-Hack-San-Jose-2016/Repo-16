@@ -1,0 +1,137 @@
+<div id="wrapper" class="row ng-scope">
+	<header>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper teal darken-1">
+					<a href="" class="brand-logo">&nbsp&nbsp<img
+						src="http://www.housingtrustsv.org/wp-content/uploads/2014/12/HTSV-Jan2013-PNG-small.png"
+						width="40px"></a> <a class="brand-logo teal darken-1 center"><b>Houses Available</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="row">
+			<div class="card col s2">
+				<h5>Filters:</h5>
+				<div class="card row">
+					<div class="col s12"><p>No. of Stories</p></div>
+					<div class="col s12">
+						<input type="checkbox" id="story1" />
+	      				<label for="story1">1</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="story2" />
+	      				<label for="story2">2</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="story3" />
+	      				<label for="story3">3</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="story4" />
+	      				<label for="story4">4</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="story5" />
+	      				<label for="story5">5</label>
+	      			</div>
+				</div>
+				<div class="card row">
+					<div class="col s12"><p>Price Range:</p></div>
+					<div class="col s12">
+						<input type="checkbox" id="range1" />
+	      				<label for="range1">&gt100K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="range2" />
+	      				<label for="range2">&gt200K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="range3" />
+	      				<label for="range3">&gt300K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="range4" />
+	      				<label for="range4">&gt400K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="range5" />
+	      				<label for="range5">&gt500K</label>
+	      			</div>
+				</div>
+				<div class="card row">
+					<div class="col s12"><p>Market Value:</p></div>
+					<div class="col s12">
+						<input type="checkbox" id="mkv1" />
+	      				<label for="mkv1">&gt200K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="mkv2" />
+	      				<label for="mkv2">&gt400K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="mkv3" />
+	      				<label for="mkv3">&gt600K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="mkv4" />
+	      				<label for="mkv4">&gt800K</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="mkv5" />
+	      				<label for="mkv5">&gt1000K</label>
+	      			</div>
+				</div>
+				<div class="card row">
+					<div class="col s12"><p>Area in .sqft</p></div>
+					<div class="col s12">
+						<input type="checkbox" id="area1" />
+	      				<label for="area1">&gt600 .sqft</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="area2" />
+	      				<label for="area2">&gt800 .sqft</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="area3" />
+	      				<label for="area3">&gt1000 .sqft</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="area4" />
+	      				<label for="area4">&gt1200 .sqft</label>
+	      			</div>
+					<div class="col s12">
+						<input type="checkbox" id="area5" />
+	      				<label for="area5">&gt1400 .sqft</label>
+	      			</div>
+				</div>
+			</div>
+			<div class="col s10">
+				<div class="row">
+					<div class="col s4" ng-repeat="house in houses">
+						<div class="card">
+				            <div class="card-image">
+				              <img src="images/house.png">
+				              <span class="card-title">House {{$index + 1}}</span>
+				            </div>
+				            <div class="card-content">
+				              <p><b>BMP price:</</b></p>
+				              <p>{{house.bmr}}</p><br>
+				              <p><b>Market Value:</</b></p>
+				              <p>{{house.imv}}</p><br>
+				              <p><b>Area:</</b></p>
+				              <p>{{house.area}} .sqft</p><br>
+				              <p><b>Stories:</</b></p>
+				              <p>{{house.stories}}</p><br>
+				            </div>
+				            <div class="card-action">
+				              <a href="">Open in google map</a>
+				            </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
