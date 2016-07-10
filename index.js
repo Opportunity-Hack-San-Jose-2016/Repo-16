@@ -9,12 +9,17 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
+//app.use(app.router);
+app.use('/', function(request, response) {
+	// Use response.sendfile, as it streams instead of reading the file into memory.
+	response.sendfile(__dirname + '/public/index.html');
 });
+
+/*
+ * app.get('/', function(request, response) { response.render('pages/index');
+ * });
+ */
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+	console.log('Node app is running on port', app.get('port'));
 });
-
-
