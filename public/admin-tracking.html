@@ -16,9 +16,12 @@
 		<div class="row">
 			<div class="col s2"><p>&nbsp</p></div>
 			<div class="col s8">
+				<label><b>Search Keyword</b></label>
+				<input type="text" id="searchKeyword" ng-model="searchKeyword" >
 				<table class="striped highlight">
 			        <thead>
 			          <tr>
+			          	  <th data-field="Tracking ID">Tracking ID#</th>
 			              <th data-field="firstname">First Name</th>
 			              <th data-field="lastname">Last Name</th>
 			              <th data-field="address">Address</th>
@@ -29,7 +32,8 @@
 			          </tr>
 			        </thead>
 			        <tbody>
-			          <tr ng-repeat="applicant in applicants">
+			          <tr ng-repeat="applicant in applicants | filter: searchKeyword">
+			            <td>{{applicant._id.$oid}}</td>
 			            <td>{{applicant.fname}}</td>
 			            <td>{{applicant.lname}}</td>
 			            <td>{{applicant.address}}</td>
