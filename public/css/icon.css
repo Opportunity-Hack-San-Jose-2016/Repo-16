@@ -21,4 +21,4 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.modal { width: 90% !important ; height: 2000px !important }
+.modal { width: 75% !important ; max-height: 72% !important ;}
