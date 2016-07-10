@@ -9,11 +9,11 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-//app.use(app.router);
 app.use('/', function(request, response) {
 	// Use response.sendfile, as it streams instead of reading the file into memory.
 	response.sendfile(__dirname + '/public/index.html');
 });
+
 
 /*
  * app.get('/', function(request, response) { response.render('pages/index');
