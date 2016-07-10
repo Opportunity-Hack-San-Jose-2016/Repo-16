@@ -1,0 +1,317 @@
+<div id="wrapper" class="row ng-scope">
+   <script type="text/javascript" src="angular/eligibiltyQuestions.js"></script>
+   <header>
+      <div class="navbar-fixed">
+         <nav>
+            <div class="nav-wrapper teal darken-1">
+               <a href="" class="brand-logo">&nbsp&nbsp<img src="http://www.housingtrustsv.org/wp-content/uploads/2014/12/HTSV-Jan2013-PNG-small.png" width="40px"></a>
+               <a class="brand-logo teal darken-1 center"><b>PRE-QUALIFICATION FORM</b></a>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <div id = "contactInfo">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+            	<div class="row">
+	            	<span class="teal-text darken-2"><b>
+	               &nbsp&nbspWhats your first name?</b><br>
+	               <input type="text" id ="fname" name="fname" ng-model="fname">
+	               </span>
+            	</div>
+            	<div class="row">
+	            	<span class="teal-text darken-2"><b>
+	               &nbsp&nbspWhats your last name?</b><br>
+	               <input type="text" id =lname name="lname" ng-model="lname">
+	               </span>
+            	</div>
+            	<div class="row">
+	            	<span class="teal-text darken-2"><b>
+	               &nbsp&nbspWhats your Address?</b><br>
+	               <textarea class="materialize-textarea" id ="address" name="address" ng-model="address"></textarea>
+	               </span>
+            	</div>
+            	<div class="row">
+	            	<span class="teal-text darken-2"><b>
+	               &nbsp&nbspWhats your phone?</b><br>
+	               <input type="text" id ="phone" name="phone" ng-model="phone">
+	               </span>
+            	</div>
+               <div class="row">
+	            	<span class="teal-text darken-2"><b>
+	               &nbsp&nbspWhats your email?</b><br>
+	               <input type="text" id ="mail" name="mail" ng-model="mail">
+	               </span>
+            	</div>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <div id = "citydiv" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               1.&nbsp&nbspWhich city do you live in?</b><br>
+               <input type="text" id ="citylive" name="citylive" ng-model="citylive"><br>
+               </span><br>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <div id = "workCity" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp2. Which city do you work in?</b><br>
+               <input type="text" id ="citywork" name="citywork" ng-model="citywork"><br>
+               </span><br>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div id = "familyCity" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp3. Which city do the other members of the family work in?</b><br>
+               <input type="text" id="citywork_other" name="citywork_other" ng-model="citywork_other"><br><br>
+               </span><br>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <div id ="otherfamilyMembers" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               4. Which city do the other members of the family live in?</b><br>
+               <input type="text" id ="citylive_other" name="citylive_other" ng-model="citylive_other"><br>
+               </span><br>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <div id="totalMembers" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               5. How many household members in your home?<br>
+               <br>Adult(over 18 years of age)
+               <input type="text" id = "adultmember"name="adultmember" ng-model="adultmember">
+               <br><br>
+               <br>Children</b>
+               <input type="text" id ="childrenmember"name="childrenmember" ng-model="childrenmember"><br><br>
+               </span><br>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <div id ="primaryResidence" ng-hide="ques_6" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               6. Have you or household member owned a home as a primary residence within the last
+               three years?</b><br>&nbsp&nbsp&nbsp&nbsp&nbsp
+               <input class="with-gap" name="primary" type="radio" id="primary_yes" ng-model="own_home" value="yes"/>
+               <label for="primary_yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+               <input class="with-gap" name="primary" type="radio" id="primary_no" ng-model="own_home" value="no"/>
+               <label for="primary_no">No</label>
+               </span>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div id = "isBmpApproved" ng-hide="ques_7" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               7. Have you been prequalified or pre-approved by one of the approved BMP lenders?</b> <br>&nbsp&nbsp&nbsp&nbsp&nbsp
+               <input class="with-gap" name="isApproved" type="radio" id="isApproved_yes" ng-model="pre_home" value="yes"/>
+               <label for="isApproved_yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+               <input class="with-gap" name="isApproved" type="radio" id="isApproved_no" ng-model="pre_home" value="no"/>
+               <label for="isApproved_no">No</label>
+               </span>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div id = "income" ng-hide="ques_8" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               8. What is the total estimated gross (before taxes and deductions) household income –
+               includes every household member over the age of 18 years earning an income, <br>
+               <br>&nbsp&nbspMonthly </b>
+               <input type="text" id ="income_monthly" name="income_monthly" ng-model="income_monthly">
+               <br>
+               <br>&nbsp&nbsp<b>yearly </b>
+               <input type="text" id ="income_yearly" name="income_yearly" ng-model="income_yearly"><br>
+               </span>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div id="downPayment" ng-hide="ques_9" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               9. Amount of down payment you have saved for the purchase </b><br>
+               <input type="text" id="downPaymentAmt" name="downpayment" ng-model="downpayment"><br>
+               </span>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div id ="downPaymentSource" ng-hide="ques_10" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               10. What is your source of down payment? (checking, savings, retirement, gift, etc.)</b> <br>
+               <input type="text" id = "payment_src" name="payment_src" ng-model="payment_src"><br>
+               </span>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+   <br>
+   <div id="financialAsset" ng-hide="ques_11" style="display:none">
+      <div class ="row">
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+         <div class ="col s8">
+            <div class="card-panel white lighten-3 hoverable">
+               <span class="teal-text darken-2"><b>
+               &nbsp&nbsp
+               11. Do have financial assets (liquid and non-liquid) over 100K? <br>&nbsp&nbsp&nbsp&nbsp&nbsp
+               <input class="with-gap" name="asset" type="radio" id="asset_yes" ng-model="asset" value="yes"/>
+               <label for="asset_yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+               <input class="with-gap" name="asset" type="radio" id="asset_no" ng-model="asset" value="no"/>
+               <label for="asset_no">No</label>
+               </span>
+            </div>
+         </div>
+         <div class="col s2">
+            <p>&nbsp</p>
+         </div>
+      </div>
+   </div>
+</div>
+<br>
+<div id="hudApproved" ng-hide="ques_12" style="display:none">
+   <div class ="row">
+      <div class="col s2">
+         <p>&nbsp</p>
+      </div>
+      <div class ="col s8">
+         <div class="card-panel white lighten-3 hoverable">
+            <span class="teal-text darken-2"><b>
+            &nbsp&nbsp
+            12. Have you or any household member attended the HUD Approved 8 Hour Homebuyer
+            Education Class within the last year?  <br>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input class="with-gap" name="isHudApproved" type="radio" id="isHudApproved_yes" ng-model="HUD_class" value="yes"/>
+            <label for="isHudApproved_yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+            <input class="with-gap" name="isHudApproved" type="radio" id="isHudApproved_no" ng-model="HUD_class" value="no"/>
+            <label for="isHudApproved_no">No</label>
+            </span>
+         </div>
+      </div>
+      <div class="col s2">
+         <p>&nbsp</p>
+      </div>
+   </div>
+</div>
+</div>
+<div class="row" id="submitButton" ng-hide="submit" align="center" style="display:none">
+   <a class="waves-effect waves-light btn" ng-click="submitdata();">Submit</a>
+</div>
+</div>
