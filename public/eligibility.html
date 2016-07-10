@@ -17,35 +17,38 @@
          </div>
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
+            <h4 class="header center"><b>Your Basic Info</b></h4>
             	<div class="row">
-	            	<span class="teal-text darken-2"><b>
-	               &nbsp&nbspWhats your first name?</b><br>
-	               <input type="text" id ="fname" name="fname" ng-model="fname">
-	               </span>
-            	</div>
-            	<div class="row">
-	            	<span class="teal-text darken-2"><b>
-	               &nbsp&nbspWhats your last name?</b><br>
-	               <input type="text" id =lname name="lname" ng-model="lname">
-	               </span>
-            	</div>
-            	<div class="row">
-	            	<span class="teal-text darken-2"><b>
-	               &nbsp&nbspWhats your Address?</b><br>
-	               <textarea class="materialize-textarea" id ="address" name="address" ng-model="address"></textarea>
-	               </span>
-            	</div>
-            	<div class="row">
-	            	<span class="teal-text darken-2"><b>
-	               &nbsp&nbspWhats your phone?</b><br>
-	               <input type="text" id ="phone" name="phone" ng-model="phone">
-	               </span>
-            	</div>
-               <div class="row">
-	            	<span class="teal-text darken-2"><b>
-	               &nbsp&nbspWhats your email?</b><br>
-	               <input type="text" id ="mail" name="mail" ng-model="mail">
-	               </span>
+            		<div class="input-field col s6">
+	            		<span class="teal-text darken-2">
+	               		<input type="text" id ="fname" name="fname" ng-model="fname">
+	               		<label for="fname">First Name</label>
+	               		</span>
+	               	</div>
+            		<div class="input-field col s6">
+	            		<span class="teal-text darken-2">
+	               		<input type="text" id =lname name="lname" ng-model="lname">
+	               		<label for="lname">Last Name</label>
+	               		</span>
+	               	</div>
+            		<div class="input-field col s12">
+	            		<span class="teal-text darken-2">
+	               		<textarea class="materialize-textarea" id ="address" name="address" ng-model="address"></textarea>
+	               		<label for="address">Address</label>
+	               		</span>
+	               	</div>
+            		<div class="input-field col s6">
+	            		<span class="teal-text darken-2">
+	               		<input type="text" id ="phone" name="phone" ng-model="phone">
+	               		<label for="phone">Phone</label>
+	               		</span>
+	               	</div>
+            		<div class="input-field col s6">
+	            		<span class="teal-text darken-2">
+	               		<input type="text" id ="mail" name="mail" ng-model="mail">
+	               		<label for="mail">Email</label>
+	               		</span>
+	               	</div>
             	</div>
             </div>
          </div>
@@ -62,7 +65,7 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               1.&nbsp&nbspWhich city do you live in?</b><br>
+               1. Which city do you live in?</b><br>
                <input type="text" id ="citylive" name="citylive" ng-model="citylive"><br>
                </span><br>
             </div>
@@ -80,7 +83,7 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp2. Which city do you work in?</b><br>
+               2. Which city do you work in?</b><br>
                <input type="text" id ="citywork" name="citywork" ng-model="citywork"><br>
                </span><br>
             </div>
@@ -99,7 +102,7 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp3. Which city do the other members of the family work in?</b><br>
+               3. Which city do the other members of the family work in?</b><br>
                <input type="text" id="citywork_other" name="citywork_other" ng-model="citywork_other"><br><br>
                </span><br>
             </div>
@@ -117,7 +120,6 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                4. Which city do the other members of the family live in?</b><br>
                <input type="text" id ="citylive_other" name="citylive_other" ng-model="citylive_other"><br>
                </span><br>
@@ -136,12 +138,10 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
-               5. How many household members in your home?<br>
-               <br>Adult(over 18 years of age)
-               <input type="text" id = "adultmember"name="adultmember" ng-model="adultmember">
-               <br><br>
-               <br>Children</b>
+               5. How many household members in your home?</b><br>
+               <br>No. of Adults(over 18 years of age)
+               <input type="text" id = "adultmember" name="adultmember" ng-model="adultmember">
+               <br>No. of Children
                <input type="text" id ="childrenmember"name="childrenmember" ng-model="childrenmember"><br><br>
                </span><br>
             </div>
@@ -159,7 +159,6 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                6. Have you or household member owned a home as a primary residence within the last
                three years?</b><br>&nbsp&nbsp&nbsp&nbsp&nbsp
                <input class="with-gap" name="primary" type="radio" id="primary_yes" ng-model="own_home" value="yes"/>
@@ -183,7 +182,6 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                7. Have you been prequalified or pre-approved by one of the approved BMP lenders?</b> <br>&nbsp&nbsp&nbsp&nbsp&nbsp
                <input class="with-gap" name="isApproved" type="radio" id="isApproved_yes" ng-model="pre_home" value="yes"/>
                <label for="isApproved_yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -206,13 +204,11 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                8. What is the total estimated gross (before taxes and deductions) household income –
                includes every household member over the age of 18 years earning an income, <br>
-               <br>&nbsp&nbspMonthly </b>
+               <br>Monthly </b>
                <input type="text" id ="income_monthly" name="income_monthly" ng-model="income_monthly">
-               <br>
-               <br>&nbsp&nbsp<b>yearly </b>
+               <br><b>yearly </b>
                <input type="text" id ="income_yearly" name="income_yearly" ng-model="income_yearly"><br>
                </span>
             </div>
@@ -231,7 +227,6 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                9. Amount of down payment you have saved for the purchase </b><br>
                <input type="text" id="downPaymentAmt" name="downpayment" ng-model="downpayment"><br>
                </span>
@@ -251,7 +246,6 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                10. What is your source of down payment? (checking, savings, retirement, gift, etc.)</b> <br>
                <input type="text" id = "payment_src" name="payment_src" ng-model="payment_src"><br>
                </span>
@@ -271,7 +265,6 @@
          <div class ="col s8">
             <div class="card-panel white lighten-3 hoverable">
                <span class="teal-text darken-2"><b>
-               &nbsp&nbsp
                11. Do have financial assets (liquid and non-liquid) over 100K? <br>&nbsp&nbsp&nbsp&nbsp&nbsp
                <input class="with-gap" name="asset" type="radio" id="asset_yes" ng-model="asset" value="yes"/>
                <label for="asset_yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -295,7 +288,6 @@
       <div class ="col s8">
          <div class="card-panel white lighten-3 hoverable">
             <span class="teal-text darken-2"><b>
-            &nbsp&nbsp
             12. Have you or any household member attended the HUD Approved 8 Hour Homebuyer
             Education Class within the last year?  <br>&nbsp&nbsp&nbsp&nbsp&nbsp
             <input class="with-gap" name="isHudApproved" type="radio" id="isHudApproved_yes" ng-model="HUD_class" value="yes"/>

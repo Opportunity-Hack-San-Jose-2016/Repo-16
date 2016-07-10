@@ -15,9 +15,9 @@ housingtrustApp.config(['$routeProvider', '$locationProvider',
             }).when('/eligibility', {
                 templateUrl: 'eligibility.html',
                 controller: 'eligibility_Controller'
-            }).when('/thankyou', {
-                templateUrl: 'thankyou.html',
-                controller: 'thankyou_Controller'
+            }).when('/faq', {
+                templateUrl: 'faq.html',
+                controller: 'faq_controller'
             }).when('/admin', {
                 templateUrl: 'admin-login.html',
                 controller: 'admin_login_controller'
@@ -124,7 +124,7 @@ housingtrustApp.controller('admin_tracking_Controller', function($scope, $http, 
 	});
 });
 
-housingtrustApp.controller('thankyou_Controller', function($scope, $http, $routeParams) {
+housingtrustApp.controller('faq_controller', function($scope, $http, $routeParams) {
 	
 });
 
