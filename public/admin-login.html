@@ -26,23 +26,21 @@
 						<form class="col s12">
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="email" type="email" class="validate"> <label
+									<input id="email" type="email" class="validate" ng-model="email"> <label
 										for="email">Email</label>
 								</div>
 							</div>
 							<div class="row">
 								<div class="input-field col s12">
-									<input id="password" type="password" class="validate">
+									<input id="password" type="password" class="validate" ng-model="password">
 									<label for="password">Password</label>
 								</div>
 							</div>
 						</form>
-					</div>
-				</div>
-				<div class="card-action center-align">
-					<a class="waves-effect red btn" href="#">Cancel</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-					<a class="waves-effect blue lighten-2 btn" href="home.html">Log
+						<a class="waves-effect red btn" href="">Cancel</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<a class="waves-effect blue lighten-2 btn" ng-click="doLogin();">Log
 						In</a>
+					</div>
 				</div>
 				<div class="card-action center-align">
 					<a href="#">Forgot your password?</a>

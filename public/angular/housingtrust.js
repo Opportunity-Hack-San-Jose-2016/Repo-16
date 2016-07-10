@@ -20,7 +20,7 @@ housingtrustApp.config(['$routeProvider', '$locationProvider',
                 controller: 'thankyou_Controller'
             }).when('/admin', {
                 templateUrl: 'admin-login.html',
-                controller: 'admin_controller'
+                controller: 'admin_login_controller'
             }).when('/admin/tracking', {
                 templateUrl: 'admin-tracking.html',
                 controller: 'admin_tracking_Controller'
@@ -37,8 +37,15 @@ housingtrustApp.controller('default_controller', function($scope, $http, $routeP
 	});
 });
 
-housingtrustApp.controller('admin_controller', function($scope, $http, $routeParams) {
-	
+housingtrustApp.controller('admin_login_controller', function($scope, $http, $routeParams) {
+	$scope.doLogin = function() {
+		if($scope.email == "admin@bmp.org" && $scope.password == "password") {
+			window.location = "/admin/tracking";
+		}
+		else {
+			
+		}
+	};
 });
 
 housingtrustApp.controller('registerController', function($scope, $http, $routeParams) {
@@ -101,7 +108,20 @@ housingtrustApp.controller('eligibility_Controller', function($scope, $http, $ro
 });
 
 housingtrustApp.controller('admin_tracking_Controller', function($scope, $http, $routeParams) {
-	
+	var httpResponse = $http.get("https://api.mlab.com/api/1/databases/heroku_f2wnrr7c/collections/application?apiKey=Gop-RmmiDZYteuAJCttyTwuerv6uJcZ6");
+	httpResponse.success(function(data) {
+		$scope.applicants = [];
+		data.forEach(function(applicant) {
+			if(applicant.eligible == 0) {
+				applicant.eligible = false;
+				$scope.applicants.push(applicant);
+			}
+			else {
+				applicant.eligible = true;
+				$scope.applicants.push(applicant);
+			}
+		});
+	});
 });
 
 housingtrustApp.controller('thankyou_Controller', function($scope, $http, $routeParams) {

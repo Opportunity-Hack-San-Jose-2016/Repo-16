@@ -1,0 +1,47 @@
+<div id="wrapper" class="row ng-scope">
+	<header>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper teal darken-1">
+					<a href="" class="brand-logo">&nbsp&nbsp<img
+						src="http://www.housingtrustsv.org/wp-content/uploads/2014/12/HTSV-Jan2013-PNG-small.png"
+						width="40px"></a> <a class="brand-logo teal darken-1 center"><b>Admin - HOUSING
+							TRUST SILICON VALLEY</b></a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+	<br><br>
+		<div class="row">
+			<div class="col s2"><p>&nbsp</p></div>
+			<div class="col s8">
+				<table class="striped highlight">
+			        <thead>
+			          <tr>
+			              <th data-field="firstname">First Name</th>
+			              <th data-field="lastname">Last Name</th>
+			              <th data-field="address">Address</th>
+			              <th data-field="phone">Phone</th>
+			              <th data-field="mail">Mail</th>
+			              <th data-field="income">Income (pm)</th>
+			              <th data-field="isEligible">Is Eligible</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr ng-repeat="applicant in applicants">
+			            <td>{{applicant.fname}}</td>
+			            <td>{{applicant.lname}}</td>
+			            <td>{{applicant.address}}</td>
+			            <td>{{applicant.phone}}</td>
+			            <td>{{applicant.mail}}</td>
+			            <td>{{applicant.income_monthly}}</td>
+			            <td>{{applicant.eligible}}</td>
+			          </tr>
+			        </tbody>
+			      </table>
+			</div>
+			<div class="col s2"><p>&nbsp</p></div>
+		</div>
+	</main>
+</div>
