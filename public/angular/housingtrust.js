@@ -75,13 +75,16 @@ housingtrustApp.controller('eligibility_Controller', function($scope, $http, $ro
 	        }
 		}).success(function(data) {
 			if (data.statusCode == 200) {
-				console.log("in angular 200")
-				alert("success");
+				$scope.results = '<b class="green">Congratulations!</b><br>You are eligible!!<br>We will contact you soon';
 			} else {
-				alert("failure");
+				$scope.results = '<b class="orange">We are sorry!</b><br>You are not eligible!!';
 			}
 		}).error(function(error) {
 		});
+	};
+	
+	$scope.closeMyModal = function() {
+		window.location = "/eligibility";
 	};
 });
 
