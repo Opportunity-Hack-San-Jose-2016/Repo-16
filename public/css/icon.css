@@ -20,3 +20,5 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+.modal { width: 90% !important ; height: 2000px !important }
