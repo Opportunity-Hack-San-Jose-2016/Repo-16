@@ -154,7 +154,7 @@ housingtrustApp.controller('track_controller', function($scope, $http, $routePar
 	$scope.fetchApp = function() {
 		$scope.applicants = [];
 		applicants.forEach(function(applicant) {
-			if(applicant._id.$oid == $scope.myAppId) {
+			if(applicant.pkey == $scope.myAppId) {
 				$scope.applicants.push(applicant);
 			}
 			else {
