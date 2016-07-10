@@ -1,0 +1,59 @@
+<div id="wrapper" class="row ng-scope">
+<header>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper teal darken-1">
+					<a href="/" class="brand-logo">&nbsp&nbsp<img
+						src="http://www.housingtrustsv.org/wp-content/uploads/2014/12/HTSV-Jan2013-PNG-small.png"
+						width="40px"></a> <a class="brand-logo teal darken-1 center"><b>Tracking My Application</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="row">
+			<div class="">
+				<div class="col l3">&nbsp</div>
+				<div class="col l6">
+				<br>
+				<br>
+				<h5>My Application Id</h5>
+				<input type="text" ng-model="myAppId" id="myAppId">
+				<button class="waves-effect waves-light btn" ng-click="fetchApp();">Fetch My App</button></div>
+				<div class="col l3">&nbsp</div>
+			</div>
+		</div>
+	</main>
+	<div class="row">
+			<div class="col s2"><p>&nbsp</p></div>
+			<div class="col s8">
+				<table class="striped highlight">
+			        <thead>
+			          <tr>
+			          	  <th data-field="Tracking ID">Tracking ID#</th>
+			              <th data-field="firstname">First Name</th>
+			              <th data-field="lastname">Last Name</th>
+			              <th data-field="address">Address</th>
+			              <th data-field="phone">Phone</th>
+			              <th data-field="mail">Mail</th>
+			              <th data-field="income">Income (pm)</th>
+			              <th data-field="isEligible">Is Eligible</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr ng-repeat="applicant in applicants | filter: searchKeyword">
+			            <td>{{applicant._id.$oid}}</td>
+			            <td>{{applicant.fname}}</td>
+			            <td>{{applicant.lname}}</td>
+			            <td>{{applicant.address}}</td>
+			            <td>{{applicant.phone}}</td>
+			            <td>{{applicant.mail}}</td>
+			            <td>{{applicant.income_monthly}}</td>
+			            <td>{{applicant.eligible}}</td>
+			          </tr>
+			        </tbody>
+			      </table>
+			</div>
+			<div class="col s2"><p>&nbsp</p></div>
+		</div>
+</div>

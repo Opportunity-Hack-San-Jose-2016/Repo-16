@@ -76,12 +76,13 @@ exports.add = function(req, res) {
         json: requestData
     }, function(error, response, body) {
         if (!error && response.statusCode === 200) {
-            console.log(body)
+            console.log(body);
             update_response = {
                 "statusCode": 200,
-                "isEligible" : eligible
+                "isEligible" : eligible,
+                "id": id
             };
-            res.send(update_response)
+            res.send(update_response);
         } else {
             console.log("error: " + error)
             console.log("response.statusCode: " + response.statusCode)

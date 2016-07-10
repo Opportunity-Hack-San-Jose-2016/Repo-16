@@ -15,6 +15,9 @@ housingtrustApp.config(['$routeProvider', '$locationProvider',
             }).when('/eligibility', {
                 templateUrl: 'eligibility.html',
                 controller: 'eligibility_Controller'
+            }).when('/trackMyApplication', {
+                templateUrl: 'tracking.html',
+                controller: 'track_controller'
             }).when('/faq', {
                 templateUrl: 'faq.html',
                 controller: 'faq_controller'
@@ -86,7 +89,7 @@ housingtrustApp.controller('eligibility_Controller', function($scope, $http, $ro
 		}).success(function(data) {
 			if (data.statusCode == 200) {
 				if(data.isEligible == "1") {
-					$scope.results = 'Congratulations! You are eligible!! We will contact you soon';
+					$scope.results = 'Congratulations! You are eligible!! We will contact you soon, your tracking is: ' + data.id;
 				}
 				else if(data.isEligible == "0"){
 					$scope.results = 'We are sorry! You are not eligible!!';
@@ -126,6 +129,39 @@ housingtrustApp.controller('admin_tracking_Controller', function($scope, $http, 
 
 housingtrustApp.controller('faq_controller', function($scope, $http, $routeParams) {
 	
+	
+});
+
+housingtrustApp.controller('track_controller', function($scope, $http, $routeParams) {
+	
+	
+	var applicants = [];
+	var httpResponse = $http.get("https://api.mlab.com/api/1/databases/heroku_f2wnrr7c/collections/application?apiKey=Gop-RmmiDZYteuAJCttyTwuerv6uJcZ6");
+	httpResponse.success(function(data) {
+		$scope.applicants = [];
+		data.forEach(function(applicant) {
+			if(applicant.eligible == 0) {
+				applicant.eligible = false;
+				applicants.push(applicant);
+			}
+			else {
+				applicant.eligible = true;
+				applicants.push(applicant);
+			}
+		});
+	});
+	
+	$scope.fetchApp = function() {
+		$scope.applicants = [];
+		applicants.forEach(function(applicant) {
+			if(applicant._id.$oid == $scope.myAppId) {
+				$scope.applicants.push(applicant);
+			}
+			else {
+				
+			}
+		});
+	};
 });
 
 housingtrustApp.controller('explore_Controller', function($scope, $http, $routeParams) {
