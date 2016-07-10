@@ -12,8 +12,7 @@
   "dependencies": {
     "ejs": "2.4.1",
     "express": "4.13.3",
-    "body-parser": "1.8",
-    "method-override":"*"
+    "body-parser": "^1.13.3"
   },
   "repository": {
     "type": "git",

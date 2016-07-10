@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 var eligibility_core = require('./routes/eligibility-core');
 
 app.set('port', (process.env.PORT || 5000));
@@ -9,6 +10,7 @@ app.use(express.static(__dirname + '/public'));
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.use(bodyParser.json())
 app.post("/api/savedata", eligibility_core.add);
 
 app.use('/', function(request, response) {
